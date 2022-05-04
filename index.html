@@ -7,20 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home form</title>
 </head>
+<style>
+    .link {
+        cursor: pointer;
+        color: blue;
+        font-size: 19px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        text-transform: capitalize;
+    }
+</style>
 
 <body>
     <h1>digi form</h1>
-    <a href="/digiForm/malaria-form-feedback">
-        <span>malaria-form-feedback</span>
+    <a onclick="link('malaria-form-feedback')">
+        <span class="link">malaria-form-feedback</span>
     </a>
     <br>
-    <a href="/digiForm/skin-care-case-sheet">
-        <span> skin-care-case-sheet</span>
+    <a onclick="link('skin-care-case-sheet')">
+        <span class="link"> skin-care-case-sheet</span>
     </a>
     <br>
-    <a href="/digiForm/vaccine-chart">
-        <span>vaccine-chart</span>
+    <a onclick="link('vaccine-chart')">
+        <span class="link">vaccine-chart</span>
     </a>
 </body>
+<script>
+    function link(linkStr) {
+        if (location.hostname === 'ritreshdigiscribegithub.github.io') {
+            window.location = `/digiForm/${linkStr}`;
+        } else {
+            window.location = `/${linkStr}`;
+        }
+    }
+
+</script>
 
 </html>
