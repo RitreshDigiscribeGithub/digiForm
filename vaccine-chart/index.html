@@ -36,10 +36,276 @@
     .table-card {
         background: #c3bfbf;
     }
+
+    .will-only-desktop {
+        display: block;
+    }
+
+    .will-only-mobile {
+        display: none;
+    }
+
+    @media only screen and (max-width: 762px) {
+        .will-only-desktop {
+            display: none;
+        }
+
+        .will-only-mobile {
+            display: block;
+        }
+    }
 </style>
 
 <body>
-    <div class="container-fluid" id="vaccine-table">
+    <!-- Todo:data Array -->
+    <script>
+        const table_list = [
+            {
+                duration: '2 Month', list: [
+                    {
+                        name: 'Hep B',
+                        dose: '2nd dose',
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'RV',
+                        dose: '1st dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'DTaP',
+                        dose: '1st dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Hib',
+                        dose: '1st dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'PCV13',
+                        dose: '1st dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'IPV',
+                        dose: '1st dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+            {
+                duration: '4 Month', list: [
+                    {
+                        name: 'RV',
+                        dose: '2nd dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'DTaP',
+                        dose: '2nd dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Hib',
+                        dose: '2nd dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'PCV13',
+                        dose: '2nd dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'IPV',
+                        dose: '2nd dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+            {
+                duration: '6 Month', list: [
+                    {
+                        name: 'Hep B',
+                        dose: '3rd dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'DTaP',
+                        dose: '3rd dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Hib',
+                        dose: '3rd dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'PCV13',
+                        dose: '3rd dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'IPV',
+                        dose: '3rd dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Flu',
+                        dose: 'yearly',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+            {
+                duration: '12 Month', list: [
+                    {
+                        name: 'Hib',
+                        dose: 'Booster',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'PCV13',
+                        dose: '4th dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'MMR',
+                        dose: '1st dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Varicella',
+                        dose: '1 dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Hap A',
+                        dose: '2 dose series',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    }
+                ]
+            },
+            {
+                duration: '15 Month', list: [
+                    {
+                        name: 'DTaP',
+                        dose: '4th Dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+            {
+                duration: '4-6 years', list: [
+                    {
+                        name: 'DTaP',
+                        dose: 'Booster',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'IPV',
+                        dose: 'Booster',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'MMR',
+                        dose: '2nd Dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Varicella',
+                        dose: '2 Dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+        ];
+    </script>
+    <!-- Todo:data Array -->
+
+    <!-- TODO:desktop table -->
+    <div class="container-fluid will-only-desktop">
         <form onsubmit="onSubmitHandler(event)">
             <div class="d-flex">
                 <div class="col-6">
@@ -50,421 +316,266 @@
                         SUBMIT
                 </div>
             </div>
-            <script>
-                const vaccineTable = document.getElementById('vaccine-table');
-                const table_list = [
-                    {
-                        duration: '2 Month', list: [
-                            {
-                                name: 'Hep B',
-                                dose: '2nd dose',
-                                vaccine_brand: 'hep_b_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: '',
-                            },
-                            {
-                                name: 'RV',
-                                dose: '1st dose',
-                                vaccine_brand: 'rv_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'DTaP',
-                                dose: '1st dose',
-                                vaccine_brand: 'DTaP_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'Hib',
-                                dose: '1st dose',
-                                vaccine_brand: 'Hib_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'PCV13',
-                                dose: '1st dose',
-                                vaccine_brand: 'PCV13_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'IPV',
-                                dose: '1st dose',
-                                vaccine_brand: 'DTaP_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                        ]
-                    },
-                    {
-                        duration: '4 Month', list: [
-                            {
-                                name: 'RV',
-                                dose: '2nd dose',
-                                vaccine_brand: 'rv_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'DTaP',
-                                dose: '2nd dose',
-                                vaccine_brand: 'DTaP_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'Hib',
-                                dose: '2nd dose',
-                                vaccine_brand: 'Hib_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'PCV13',
-                                dose: '2nd dose',
-                                vaccine_brand: 'PCV13_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'IPV',
-                                dose: '2nd dose',
-                                vaccine_brand: 'DTaP_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                        ]
-                    },
-                    {
-                        duration: '6 Month', list: [
-                            {
-                                name: 'Hep B',
-                                dose: '3rd dose',
-                                vaccine_brand: 'rv_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'DTaP',
-                                dose: '3rd dose',
-                                vaccine_brand: 'rv_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'Hib',
-                                dose: '3rd dose',
-                                vaccine_brand: 'Hib_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'PCV13',
-                                dose: '3rd dose',
-                                vaccine_brand: 'PCV13_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'IPV',
-                                dose: '3rd dose',
-                                vaccine_brand: 'DTaP_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'Flu',
-                                dose: 'yearly',
-                                vaccine_brand: 'DTaP_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                        ]
-                    },
-                    {
-                        duration: '12 Month', list: [
-                            {
-                                name: 'Hib',
-                                dose: 'Booster',
-                                vaccine_brand: 'Hib_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'PCV13',
-                                dose: '4th dose',
-                                vaccine_brand: 'PCV13_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'MMR',
-                                dose: '1st dose',
-                                vaccine_brand: 'PCV13_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'Varicella',
-                                dose: '1 dose',
-                                vaccine_brand: 'rv_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'Hap A',
-                                dose: '2 dose series',
-                                vaccine_brand: 'rv_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            }
-                        ]
-                    },
-                    {
-                        duration: '15 Month', list: [
-                            {
-                                name: 'DTaP',
-                                dose: '4th Dose',
-                                vaccine_brand: 'Hib_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                        ]
-                    },
-                    {
-                        duration: '4-6 years', list: [
-                            {
-                                name: 'DTaP',
-                                dose: 'Booster',
-                                vaccine_brand: 'Hib_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'IPV',
-                                dose: 'Booster',
-                                vaccine_brand: 'Hib_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'MMR',
-                                dose: '2nd Dose',
-                                vaccine_brand: 'Hib_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                            {
-                                name: 'Varicella',
-                                dose: '2 Dose',
-                                vaccine_brand: 'Hib_vaccine_brand',
-                                type: '',
-                                date_administered: '',
-                                next_appointment: ''
-                            },
-                        ]
-                    },
-                ];
-                table_list.forEach((element, i) => {
-                    vaccineTable.innerHTML += `
-                <div class="row table-card mb-3">
-            <div class="col-4">
-                <div class="input-space">
-                    <span class="d-block">${element.duration}</span>
-                </div>
-                <div class="input-space">
-                    <span class="d-block">no #</span>
-                </div>
-                <div class="input-space">
-                    <span class="d-block">Brand</span>
-                </div>
-                <div class="input-space">
-                    <span class="d-block">Type</span>
-                </div>
-                <div class="input-space">
-                    <span class="d-block">Date Given</span>
-                </div>
-                <div class="input-space">
-                    <span class="d-block">Appo On</span>
-                </div>
-            </div>
-            <div class="col-8 scroll-x">
-                <!-- haeding -->
-                <div class="d-flex">
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            Hep B
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            RV
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            DTaP
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            Hib
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            PCV13
-                        </div>
-                    </div>
-                </div>
-                <!-- haeding -->
-                <div class="input-space px-2"></div>
+            <div>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">no #</th>
+                            <th scope="col">Dose</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Date Given</th>
+                            <th scope="col">Appo On</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vaccine-table-desktop">
+                        <script>
+                            const vaccineTable = document.getElementById('vaccine-table-desktop');
+                            table_list.forEach((ele, i) => {
+                                let tr1 = document.createElement('tr')
+                                let trHeading = vaccineTable.appendChild(tr1)
 
-                <!-- table loop -->
-                <div class="d-flex">
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                    <div class="input-space px-2">
-                        <div class="input-group-sm" style="width: 190px;">
-                            <input type="text" class="form-control" value="">
-                        </div>
-                    </div>
-                </div>
-                <!-- table loop -->
+                                trHeading.innerHTML += `
+                                <tr>
+                                   <th scope="row">${ele.duration}</th>
+                                </tr>`
+                                ele.list.forEach((list, i) => {
+                                    let tr2 = document.createElement('tr')
+                                    let trRow = vaccineTable.appendChild(tr2)
+                                    trRow.innerHTML += `<tr>
+                                    <td scope="row">
+                                        <span style="width: 100px;display: block;">
+                                            ${list.name}
+                                        </span>
+                                    </td>
+                                    <td scope="row">
+                                        <span style="width: 100px;display: block;">
+                                            ${list.dose}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="input-width">
+                                            <input type="email" class="form-control form-control-sm">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="input-width">
+                                            <input type="email" class="form-control form-control-sm">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="input-width">
+                                            <input type="email" class="form-control form-control-sm">
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="input-width">
+                                            <input type="email" class="form-control form-control-sm">
+                                        </span>
+                                    </td>
+                                </tr>`
+                                })
+                            })
+                        </script>
+
+                    </tbody>
+                </table>
             </div>
-        </div>`
-                })
-            </script>
         </form>
     </div>
+    <!-- desktop table -->
+
+    <!-- TODO:mobile table -->
+    <div class="container-fluid will-only-mobile">
+        <form>
+            <div class="d-flex">
+                <div class="col-6">
+                    <h2>Vaccine chart</h2>
+                </div>
+                <div class="col-6 py-2 text-end">
+                    <button class="btn btn-md btn-primary" type="submit">
+                        SUBMIT
+                </div>
+            </div>
+            <div id="mobile-table">
+                <script>
+                    let mobileTable = document.getElementById('mobile-table');
+                    table_list.forEach((element, i) => {
+                        let card = document.createElement('div')
+                        let clasaName = document.createAttribute('class')
+                        clasaName.value = 'row table-card mb-3';
+                        card.setAttributeNode(clasaName);
+                        mobileTable.appendChild(card).innerHTML += `
+                        <div class="col-4">
+                            <div class="input-space">
+                                <span class="d-block">${element.duration}</span>
+                            </div>
+                            <div class="input-space">
+                                <span class="d-block">no #</span>
+                            </div>
+                            <div class="input-space">
+                                <span class="d-block">Brand</span>
+                            </div>
+                            <div class="input-space">
+                                <span class="d-block">Type</span>
+                            </div>
+                            <div class="input-space">
+                                <span class="d-block">Date Given</span>
+                            </div>
+                            <div class="input-space">
+                                <span class="d-block">Appo On</span>
+                            </div>
+                        </div>
+                        <div class="col-8 scroll-x">
+                            <!-- haeding -->
+                            <div class="d-flex">
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        Hep B
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        RV
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        DTaP
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        Hib
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        PCV13
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- haeding -->
+                            <div class="input-space px-2">
+                            </div>
+                            <!-- table loop -->
+                            <div class="d-flex">
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- table loop -->
+                        </div>`
+                    })
+                </script>
+            </div>
+        </form>
+    </div>
+
+    <!-- mobile table -->
 </body>
 <script>
     $(function () {
@@ -478,6 +589,7 @@
         const formProps = Object.fromEntries(formData);
         console.log(formProps);
     }
+
 </script>
 
 </html>

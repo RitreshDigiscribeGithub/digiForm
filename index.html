@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home form</title>
 </head>
+
 <style>
     .link {
         cursor: pointer;
@@ -34,7 +35,13 @@
     <a onclick="link('vaccine-chart')">
         <span class="link">vaccine-chart</span>
     </a>
+    <br>
+    <a onclick="link('test-Form')">
+        <span class="link">test-Form</span>
+    </a>
+
 </body>
+
 <script>
     function link(linkStr) {
         if (location.hostname === 'ritreshdigiscribegithub.github.io') {
@@ -43,7 +50,6 @@
             window.location = `/${linkStr}`;
         }
     }
-
 </script>
 
 </html>
