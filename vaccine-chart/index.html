@@ -320,14 +320,25 @@
                 <table class="table table-borderless">
                     <thead>
                         <tr>
-                            <th scope="col">no #</th>
-                            <th scope="col">Dose</th>
+                            <th scope="col">At Birth</th>
                             <th scope="col">Brand</th>
                             <th scope="col">Type</th>
                             <th scope="col">Date Given</th>
                             <th scope="col">Appo On</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="d-flex">
+                                <span style="width: 100px;display: block;">
+                                    Hep B
+                                </span>
+                                <span style="width: 100px;display: block;">
+                                    1st dose
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
                     <tbody id="vaccine-table-desktop">
                         <script>
                             const vaccineTable = document.getElementById('vaccine-table-desktop');
@@ -343,12 +354,10 @@
                                     let tr2 = document.createElement('tr')
                                     let trRow = vaccineTable.appendChild(tr2)
                                     trRow.innerHTML += `<tr>
-                                    <td scope="row">
+                                    <td scope="row" class="d-flex">
                                         <span style="width: 100px;display: block;">
                                             ${list.name}
                                         </span>
-                                    </td>
-                                    <td scope="row">
                                         <span style="width: 100px;display: block;">
                                             ${list.dose}
                                         </span>
@@ -360,17 +369,21 @@
                                     </td>
                                     <td>
                                         <span class="input-width">
-                                            <input type="email" class="form-control form-control-sm">
+                                            <input type="text" name="type" list="type" class="form-control form-control-sm">
+                                            <datalist id="type">
+                                                <option value="single">
+                                                <option value="combination">
+                                            </datalist>
                                         </span>
                                     </td>
                                     <td>
                                         <span class="input-width">
-                                            <input type="email" class="form-control form-control-sm">
+                                            <input type="date" class="form-control form-control-sm">
                                         </span>
                                     </td>
                                     <td>
                                         <span class="input-width">
-                                            <input type="email" class="form-control form-control-sm">
+                                            <input type="date" class="form-control form-control-sm">
                                         </span>
                                     </td>
                                 </tr>`
@@ -489,81 +502,101 @@
                             <div class="d-flex">
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="text" name="type" list="type">
+                                        <datalist id="type">
+                                                <option value="single">
+                                                <option value="combination">
+                                        </datalist>
                                     </div>
                                 </div>
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="text" name="type" list="type">
+                                        <datalist id="type">
+                                                <option value="single">
+                                                <option value="combination">
+                                        </datalist>
                                     </div>
                                 </div>
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="text" name="type" list="type">
+                                        <datalist id="type">
+                                                <option value="single">
+                                                <option value="combination">
+                                        </datalist>
                                     </div>
                                 </div>
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="text" name="type" list="type">
+                                        <datalist id="type">
+                                                <option value="single">
+                                                <option value="combination">
+                                        </datalist>
                                     </div>
                                 </div>
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="text" name="type" list="type">
+                                        <datalist id="type">
+                                                <option value="single">
+                                                <option value="combination">
+                                        </datalist>
                                     </div>
                                 </div>
                             </div>
                             <div class="d-flex">
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="date" class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="date" class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="date" class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="date" class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="input-space px-2">
                                     <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
+                                        <input type="date" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="date" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="date" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="date" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="date" class="form-control form-control-sm">
+                                    </div>
+                                </div>
+                                <div class="input-space px-2">
+                                    <div class="input-group-sm" style="width: 190px;">
+                                        <input type="date" class="form-control form-control-sm">
                                     </div>
                                 </div>
                             </div>
