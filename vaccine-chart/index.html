@@ -61,51 +61,83 @@
     <script>
         const table_list = [
             {
-                duration: '2 Month', list: [
+                duration: '',
+                combination: [
                     {
                         name: 'Hep B',
-                        dose: '2nd dose',
+                        dose: 1,
+                        vb: '',
+                        type: '',
+                        givenDate: '',
+                        next_appo: ''
+                    },
+                    {
+                        name: 'OPV',
+                        dose: 1,
+                        vb: '',
+                        type: '',
+                        givenDate: '',
+                        next_appo: ''
+                    },
+                    {
+                        name: 'BCG',
+                        dose: 1,
+                        vb: '',
+                        type: '',
+                        givenDate: '',
+                        next_appo: ''
+                    },
+                ],
+            },
+            {
+                duration: '6 Weeks',
+                combination: [
+                    {
+                        name: 'DTaP',
+                        dose: 1,
+                        vb: '',
+                        type: '',
+                        givenDate: '',
+                        next_appo: ''
+                    },
+                    {
+                        name: 'IVP',
+                        dose: 1,
+                        vb: '',
+                        type: '',
+                        givenDate: '',
+                        next_appo: ''
+                    },
+                    {
+                        name: 'Hib',
+                        dose: 1,
+                        vb: '',
+                        type: '',
+                        givenDate: '',
+                        next_appo: ''
+                    },
+                    {
+                        name: 'Hep B',
+                        dose: 2,
+                        vb: '',
+                        type: '',
+                        givenDate: '',
+                        next_appo: ''
+                    },
+                ],
+                list: [
+                    {
+                        name: 'RV',
+                        dose: 1,
                         vaccine_brand: 'hep_b_vaccine_brand',
                         type: '',
                         date_administered: '',
                         next_appointment: '',
                     },
                     {
-                        name: 'RV',
-                        dose: '1st dose',
+                        name: 'PVC',
+                        dose: 1,
                         vaccine_brand: 'rv_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'DTaP',
-                        dose: '1st dose',
-                        vaccine_brand: 'DTaP_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'Hib',
-                        dose: '1st dose',
-                        vaccine_brand: 'Hib_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'PCV13',
-                        dose: '1st dose',
-                        vaccine_brand: 'PCV13_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'IPV',
-                        dose: '1st dose',
-                        vaccine_brand: 'DTaP_vaccine_brand',
                         type: '',
                         date_administered: '',
                         next_appointment: ''
@@ -113,95 +145,54 @@
                 ]
             },
             {
-                duration: '4 Month', list: [
-                    {
-                        name: 'RV',
-                        dose: '2nd dose',
-                        vaccine_brand: 'rv_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
+                duration: '10 Weeks',
+                combination: [
                     {
                         name: 'DTaP',
-                        dose: '2nd dose',
-                        vaccine_brand: 'DTaP_vaccine_brand',
+                        dose: 2,
+                        vb: '',
                         type: '',
-                        date_administered: '',
-                        next_appointment: ''
+                        givenDate: '',
+                        next_appo: ''
+                    },
+                    {
+                        name: 'IVP',
+                        dose: 2,
+                        vb: '',
+                        type: '',
+                        givenDate: '',
+                        next_appo: ''
                     },
                     {
                         name: 'Hib',
-                        dose: '2nd dose',
-                        vaccine_brand: 'Hib_vaccine_brand',
+                        dose: 2,
+                        vb: '',
                         type: '',
-                        date_administered: '',
-                        next_appointment: ''
+                        givenDate: '',
+                        next_appo: ''
                     },
-                    {
-                        name: 'PCV13',
-                        dose: '2nd dose',
-                        vaccine_brand: 'PCV13_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'IPV',
-                        dose: '2nd dose',
-                        vaccine_brand: 'DTaP_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                ]
-            },
-            {
-                duration: '6 Month', list: [
                     {
                         name: 'Hep B',
-                        dose: '3rd dose',
+                        dose: 3,
+                        vb: '',
+                        type: '',
+                        givenDate: '',
+                        next_appo: ''
+                    },
+                ],
+                list: [
+                    {
+                        name: 'RV',
+                        dose: 2,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'PVC',
+                        dose: 2,
                         vaccine_brand: 'rv_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'DTaP',
-                        dose: '3rd dose',
-                        vaccine_brand: 'rv_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'Hib',
-                        dose: '3rd dose',
-                        vaccine_brand: 'Hib_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'PCV13',
-                        dose: '3rd dose',
-                        vaccine_brand: 'PCV13_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'IPV',
-                        dose: '3rd dose',
-                        vaccine_brand: 'DTaP_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'Flu',
-                        dose: 'yearly',
-                        vaccine_brand: 'DTaP_vaccine_brand',
                         type: '',
                         date_administered: '',
                         next_appointment: ''
@@ -209,101 +200,312 @@
                 ]
             },
             {
-                duration: '12 Month', list: [
+                duration: '14 Weeks',
+                combination: [],
+                list: [
+                    {
+                        name: 'DTaP',
+                        dose: 3,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'IPV',
+                        dose: 3,
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
                     {
                         name: 'Hib',
-                        dose: 'Booster',
-                        vaccine_brand: 'Hib_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'PCV13',
-                        dose: '4th dose',
-                        vaccine_brand: 'PCV13_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'MMR',
-                        dose: '1st dose',
-                        vaccine_brand: 'PCV13_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'Varicella',
-                        dose: '1 dose',
+                        dose: 3,
                         vaccine_brand: 'rv_vaccine_brand',
                         type: '',
                         date_administered: '',
                         next_appointment: ''
                     },
                     {
-                        name: 'Hap A',
-                        dose: '2 dose series',
+                        name: 'RV',
+                        dose: 3,
                         vaccine_brand: 'rv_vaccine_brand',
                         type: '',
                         date_administered: '',
                         next_appointment: ''
+                    },
+                    {
+                        name: 'PCV',
+                        dose: 3,
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+            {
+                duration: '6 Months',
+                combination: [],
+                list: [
+                    {
+                        name: 'Influenza',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
                     }
                 ]
             },
             {
-                duration: '15 Month', list: [
+                duration: '7 Months',
+                combination: [],
+                list: [
                     {
-                        name: 'DTaP',
-                        dose: '4th Dose',
-                        vaccine_brand: 'Hib_vaccine_brand',
+                        name: 'Influenza',
+                        dose: 2,
+                        vaccine_brand: 'hep_b_vaccine_brand',
                         type: '',
                         date_administered: '',
-                        next_appointment: ''
-                    },
+                        next_appointment: '',
+                    }
                 ]
             },
             {
-                duration: '4-6 years', list: [
+                duration: '6-9 Months',
+                combination: [],
+                list: [
                     {
-                        name: 'DTaP',
-                        dose: 'Booster',
-                        vaccine_brand: 'Hib_vaccine_brand',
+                        name: 'TCV',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
                         type: '',
                         date_administered: '',
-                        next_appointment: ''
-                    },
-                    {
-                        name: 'IPV',
-                        dose: 'Booster',
-                        vaccine_brand: 'Hib_vaccine_brand',
-                        type: '',
-                        date_administered: '',
-                        next_appointment: ''
+                        next_appointment: '',
                     },
                     {
                         name: 'MMR',
-                        dose: '2nd Dose',
-                        vaccine_brand: 'Hib_vaccine_brand',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
                         type: '',
                         date_administered: '',
-                        next_appointment: ''
+                        next_appointment: '',
                     },
                     {
-                        name: 'Varicella',
-                        dose: '2 Dose',
-                        vaccine_brand: 'Hib_vaccine_brand',
+                        name: 'Meningococcal',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
                         type: '',
                         date_administered: '',
-                        next_appointment: ''
+                        next_appointment: '',
+                    }
+                ]
+            },
+            {
+                duration: '12 Months',
+                combination: [],
+                list: [
+                    {
+                        name: 'Hep A',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
                     },
+                    {
+                        name: 'Meningococcal',
+                        dose: 2,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'JE',
+                        dose: 2,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    }
+                ]
+            },
+            {
+                duration: '13 Months',
+                combination: [],
+                list: [
+                    {
+                        name: 'JE',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    }
+                ]
+            },
+            {
+                duration: '15 Months',
+                combination: [],
+                list: [
+                    {
+                        name: 'MMR',
+                        dose: 2,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'Vercella',
+                        dose: 2,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'PVC Booster',
+                        dose: 2,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    }
+                ]
+            },
+            {
+                duration: '16-18 Months',
+                combination: [],
+                list: [
+                    {
+                        name: 'DTaP',
+                        dose: 'B1',
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'IPV',
+                        dose: 'B1',
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'Hib',
+                        dose: 'B1',
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    }
+                ]
+            },
+            {
+                duration: '18-24 Months',
+                combination: [],
+                list: [
+                    {
+                        name: 'JE',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'Hep A',
+                        dose: 2,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'Typhoid',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    }
+                ]
+            },
+            {
+                duration: '4-6 Years',
+                combination: [],
+                list: [
+                    {
+                        name: 'DTaP',
+                        dose: 'B2',
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'IPV',
+                        dose: 'B2',
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'MMR',
+                        dose: 3,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    }
+                ]
+            },
+            {
+                duration: '10 Years',
+                combination: [],
+                list: [
+                    {
+                        name: 'Tdap',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'HPV',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    }
+                ]
+            },
+            {
+                duration: '15 Years',
+                combination: [],
+                list: [
+                    {
+                        name: 'Tdap',
+                        dose: 1,
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    }
                 ]
             },
         ];
     </script>
     <!-- Todo:data Array -->
-
     <!-- TODO:desktop table -->
     <div class="container-fluid will-only-desktop">
         <form onsubmit="onSubmitHandler(event)">
@@ -317,81 +519,93 @@
                 </div>
             </div>
             <div>
-                <table class="table table-borderless">
-                    <thead>
+                <table class="table table-borderless" id="pc-table">
+                    <script>
+                        let x = document.getElementById('pc-table')
+                        x.innerHTML = ` 
+                        <thead>
+                          <tr>
+                              <th scope="col">At Birth</th>
+                               <th scope="col">#No</th>
+                               <th scope="col">Brand</th>
+                               <th scope="col">Type</th>
+                               <th scope="col">Date Given</th>
+                               <th scope="col">Appo On</th>
+                          </tr>
+                       </thead>
+                       ${table_list.map((table, i) => `
+                        <tbody>
+                          <tr>
+                            <th scope="col">${table.duration}</th>
+                          </tr>
                         <tr>
-                            <th scope="col">At Birth</th>
-                            <th scope="col">Brand</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Date Given</th>
-                            <th scope="col">Appo On</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row" class="d-flex">
-                                <span style="width: 100px;display: block;">
-                                    Hep B
-                                </span>
-                                <span style="width: 100px;display: block;">
-                                    1st dose
+                            <td>${table.combination.length ? table.combination.map((com, j) => `
+                                <span class="d-block">${com.name}</span>
+                            `).join(' ') : ''}</td>
+
+                            <td>${table.combination.length ? table.combination.map((com, j) => `
+                                <span class="d-block">${com.dose}</span>
+                            `).join(' ') : ''}</td>
+                            ${(table.combination && table.combination.length) ? `
+                                <td>
+                                <span class="input-width">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
                                 </span>
                             </td>
+                            <td>
+                                <span class="input-width">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="input-width">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="input-width">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                </span>
+                            </td>
+                            ` : ``}
+                            
                         </tr>
+                        ${table.list ? table.list.map((single, i) => `
+                            <tr>
+                          <td><span class="d-block">${single.name}</span></td>
+                          <td><span class="d-block">${single.dose}</span></td>
+                          <td>
+                            <span style="width: 190px;" class="input-group-sm">
+                               <input type="text" class="form-control" value="">
+                            </span>
+                          </td>
+                          <td>
+                            <span style="width: 190px;" class="input-group-sm">
+                               <input type="text" class="form-control" value="">
+                            </span>
+                          </td>
+                          <td>
+                            <span style="width: 190px;" class="input-group-sm">
+                               <input type="text" class="form-control" value="">
+                            </span>
+                          </td>
+                          <td>
+                            <span style="width: 190px;" class="input-group-sm">
+                               <input type="text" class="form-control" value="">
+                            </span>
+                          </td>
+                          <td>
+                            <div class="form-check">
+                               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                   <label class="form-check-label" for="flexCheckDefault">Default checkbox
+                                 </label>
+                            </div>
+                          </td>
+                        </tr>
+                        `).join(' ') : ''}
                     </tbody>
-                    <tbody id="vaccine-table-desktop">
-                        <script>
-                            const vaccineTable = document.getElementById('vaccine-table-desktop');
-                            table_list.forEach((ele, i) => {
-                                let tr1 = document.createElement('tr')
-                                let trHeading = vaccineTable.appendChild(tr1)
-
-                                trHeading.innerHTML += `
-                                <tr>
-                                   <th scope="row">${ele.duration}</th>
-                                </tr>`
-                                ele.list.forEach((list, i) => {
-                                    let tr2 = document.createElement('tr')
-                                    let trRow = vaccineTable.appendChild(tr2)
-                                    trRow.innerHTML += `<tr>
-                                    <td scope="row" class="d-flex">
-                                        <span style="width: 100px;display: block;">
-                                            ${list.name}
-                                        </span>
-                                        <span style="width: 100px;display: block;">
-                                            ${list.dose}
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span class="input-width">
-                                            <input type="email" class="form-control form-control-sm">
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span class="input-width">
-                                            <input type="text" name="type" list="type" class="form-control form-control-sm">
-                                            <datalist id="type">
-                                                <option value="single">
-                                                <option value="combination">
-                                            </datalist>
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span class="input-width">
-                                            <input type="date" class="form-control form-control-sm">
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span class="input-width">
-                                            <input type="date" class="form-control form-control-sm">
-                                        </span>
-                                    </td>
-                                </tr>`
-                                })
-                            })
-                        </script>
-
-                    </tbody>
+                    `).join(' ')}`
+                    </script>
                 </table>
             </div>
         </form>
@@ -412,197 +626,124 @@
             </div>
             <div id="mobile-table">
                 <script>
-                    let mobileTable = document.getElementById('mobile-table');
-                    table_list.forEach((element, i) => {
-                        let card = document.createElement('div')
-                        let clasaName = document.createAttribute('class')
-                        clasaName.value = 'row table-card mb-3';
-                        card.setAttributeNode(clasaName);
-                        mobileTable.appendChild(card).innerHTML += `
-                        <div class="col-4">
-                            <div class="input-space">
-                                <span class="d-block">${element.duration}</span>
-                            </div>
-                            <div class="input-space">
-                                <span class="d-block">no #</span>
-                            </div>
-                            <div class="input-space">
-                                <span class="d-block">Brand</span>
-                            </div>
-                            <div class="input-space">
-                                <span class="d-block">Type</span>
-                            </div>
-                            <div class="input-space">
-                                <span class="d-block">Date Given</span>
-                            </div>
-                            <div class="input-space">
-                                <span class="d-block">Appo On</span>
-                            </div>
+                    const mobileTable = document.getElementById('mobile-table');
+                    table_list.map((element, i) => {
+                        mobileTable.innerHTML += `<div class="row table-card mb-3">
+                    <div class="col-4">
+                        <div class="input-space">
+                            <span class="d-block">${element.duration}</span>
                         </div>
-                        <div class="col-8 scroll-x">
-                            <!-- haeding -->
-                            <div class="d-flex">
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        Hep B
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        RV
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        DTaP
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        Hib
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        PCV13
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- haeding -->
+                        <div class="input-space">
+                            <span class="d-block">no #</span>
+                        </div>
+                        <div class="input-space">
+                            <span class="d-block">Brand</span>
+                        </div>
+                        <div class="input-space">
+                            <span class="d-block">Type</span>
+                        </div>
+                        <div class="input-space">
+                            <span class="d-block">Date Given</span>
+                        </div>
+                        <div class="input-space">
+                            <span class="d-block">Appo On</span>
+                        </div>
+                    </div>
+                    <div class="col-8 scroll-x">
+                        <!-- haeding -->
+                        <div class="d-flex">
+                            ${element.combination.length ? `
                             <div class="input-space px-2">
-                            </div>
-                            <!-- table loop -->
-                            <div class="d-flex">
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" value="">
-                                    </div>
+                                <div class="input-group-sm" 
+                                style="width: 190px;">  
+                                ${element.combination.map((com, i) => com.name + ',').join(' ')}
                                 </div>
                             </div>
-                            <div class="d-flex">
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" name="type" list="type">
-                                        <datalist id="type">
-                                                <option value="single">
-                                                <option value="combination">
-                                        </datalist>
-                                    </div>
+                            ` : ''}
+                           
+                            ${element.list ? element.list.map((com, i) => `<div class="input-space px-2">
+                                <div class="input-group-sm" style="width: 190px;">
+                                    ${com.name}
                                 </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" name="type" list="type">
-                                        <datalist id="type">
-                                                <option value="single">
-                                                <option value="combination">
-                                        </datalist>
-                                    </div>
+                            </div>`).join(' ') : ''}
+
+                        </div>
+                        <!-- haeding -->
+                        <div class="d-flex">
+                            <div class="input-space px-2"></div>
+                        </div>
+                        <!-- table loop -->
+                        <div class="d-flex">
+                            ${element.combination.length ? `<div class="input-space px-2">
+                                <div class="input-group-sm" style="width: 190px;">
+                                    <input type="text" class="form-control" value="">
                                 </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" name="type" list="type">
-                                        <datalist id="type">
-                                                <option value="single">
-                                                <option value="combination">
-                                        </datalist>
-                                    </div>
+                            </div>`: ''}
+                            ${(element.list && element.list.length) ? element.list.map((ele, i) => {
+                            return `<div class="input-space px-2">
+                                <div class="input-group-sm" style="width: 190px;">
+                                    <input type="text" class="form-control" value="">
                                 </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" name="type" list="type">
-                                        <datalist id="type">
-                                                <option value="single">
-                                                <option value="combination">
-                                        </datalist>
-                                    </div>
+                            </div>`
+                        }).join(' ') : ''}
+                        </div>
+                        <div class="d-flex">
+                            ${element.combination.length ? `<div class="input-space px-2">
+                                <div class="input-group-sm" style="width: 190px;">
+                                    <input type="text" class="form-control" name="type" list="type">
+                                    <datalist id="type">
+                                        <option value="single">
+                                        <option value="combination">
+                                    </datalist>
                                 </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="text" class="form-control" name="type" list="type">
-                                        <datalist id="type">
-                                                <option value="single">
-                                                <option value="combination">
-                                        </datalist>
-                                    </div>
+                            </div>`: ''}
+                            ${(element.list && element.list.length) ? element.list.map((ele, i) => {
+                            return `<div class="input-space px-2">
+                                <div class="input-group-sm" style="width: 190px;">
+                                    <input type="text" class="form-control" name="type" list="type">
+                                    <datalist id="type">
+                                        <option value="single">
+                                        <option value="combination">
+                                    </datalist>
                                 </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
+                            </div>`
+                        }).join(' ') : ''}
+                        </div>
+                        
+                        <div class="d-flex">
+                            ${element.combination.length ? `<div class="input-space px-2">
+                                <div class="input-group-sm" style="width: 190px;">
+                                    <input type="date" class="form-control form-control-sm">
                                 </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
+                            </div>`: ''}
+                            ${(element.list && element.list.length) ? element.list.map((ele, i) => {
+                            return `<div class="input-space px-2">
+                                <div class="input-group-sm" style="width: 190px;">
+                                    <input type="date" class="form-control form-control-sm">
                                 </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
+                            </div>`
+                        }).join(' ') : ''}
+                        </div>
+                        <div class="d-flex">
+                            ${element.combination.length ? `<div class="input-space px-2">
+                                <div class="input-group-sm" style="width: 190px;">
+                                    <input type="date" class="form-control form-control-sm">
                                 </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
+                            </div>`: ''}
+                            ${(element.list && element.list.length) ? element.list.map((ele, i) => {
+                            return `<div class="input-space px-2">
+                                <div class="input-group-sm" style="width: 190px;">
+                                    <input type="date" class="form-control form-control-sm">
                                 </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                                <div class="input-space px-2">
-                                    <div class="input-group-sm" style="width: 190px;">
-                                        <input type="date" class="form-control form-control-sm">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- table loop -->
-                        </div>`
+                            </div>`
+                        }).join(' ') : ''}
+                        </div>
+                        <!-- table loop -->
+                    </div>
+                </div>`
+
                     })
+
                 </script>
             </div>
         </form>

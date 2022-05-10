@@ -20,58 +20,342 @@
 </style>
 
 <body>
-    <h1>dfsdf</h1>
-    <table class="table table-borderless">
-        <thead>
-            <tr>
-                <th scope="col">no #</th>
-                <th scope="col">Dose</th>
-                <th scope="col">Brand</th>
-                <th scope="col">Type</th>
-                <th scope="col">Date Given</th>
-                <th scope="col">Appo On</th>
-            </tr>
-        </thead>
-        <tbody x-data="{ colors: ['Red', 'Orange', 'Yellow'] }">
-            <tr>
-                <th scope="row">2 Month</th>
-            </tr>
-            <template x-for="color in colors">
-                <tr>
-                    <th scope="row">
-                        <span style="width: 100px;display: block;">
-                            Hep B
-                        </span>
-                    </th>
-                    <th scope="row">
-                        <span style="width: 100px;display: block;">
-                            2nd Dose
-                        </span>
-                    </th>
-                    <td>
-                        <span class="input-width">
-                            <input type="email" class="form-control form-control-sm">
-                        </span>
-                    </td>
-                    <td>
-                        <span class="input-width">
-                            <input type="email" class="form-control form-control-sm">
-                        </span>
-                    </td>
-                    <td>
-                        <span class="input-width">
-                            <input type="email" class="form-control form-control-sm">
-                        </span>
-                    </td>
-                    <td>
-                        <span class="input-width">
-                            <input type="email" class="form-control form-control-sm">
-                        </span>
-                    </td>
-                </tr>
-            </template>
-        </tbody>
-    </table>
+    <!-- Todo:data Array -->
+    <script>
+        const table_list = [
+            {
+                duration: '2 Month', list: [
+                    {
+                        name: 'Hep B',
+                        dose: '2nd dose',
+                        vaccine_brand: 'hep_b_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: '',
+                    },
+                    {
+                        name: 'RV',
+                        dose: '1st dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'DTaP',
+                        dose: '1st dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Hib',
+                        dose: '1st dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'PCV13',
+                        dose: '1st dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'IPV',
+                        dose: '1st dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+            {
+                duration: '4 Month', list: [
+                    {
+                        name: 'RV',
+                        dose: '2nd dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'DTaP',
+                        dose: '2nd dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Hib',
+                        dose: '2nd dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'PCV13',
+                        dose: '2nd dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'IPV',
+                        dose: '2nd dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+            {
+                duration: '6 Month', list: [
+                    {
+                        name: 'Hep B',
+                        dose: '3rd dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'DTaP',
+                        dose: '3rd dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Hib',
+                        dose: '3rd dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'PCV13',
+                        dose: '3rd dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'IPV',
+                        dose: '3rd dose',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Flu',
+                        dose: 'yearly',
+                        vaccine_brand: 'DTaP_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+            {
+                duration: '12 Month', list: [
+                    {
+                        name: 'Hib',
+                        dose: 'Booster',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'PCV13',
+                        dose: '4th dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'MMR',
+                        dose: '1st dose',
+                        vaccine_brand: 'PCV13_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Varicella',
+                        dose: '1 dose',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Hap A',
+                        dose: '2 dose series',
+                        vaccine_brand: 'rv_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    }
+                ]
+            },
+            {
+                duration: '15 Month', list: [
+                    {
+                        name: 'DTaP',
+                        dose: '4th Dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+            {
+                duration: '4-6 years', list: [
+                    {
+                        name: 'DTaP',
+                        dose: 'Booster',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'IPV',
+                        dose: 'Booster',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'MMR',
+                        dose: '2nd Dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                    {
+                        name: 'Varicella',
+                        dose: '2 Dose',
+                        vaccine_brand: 'Hib_vaccine_brand',
+                        type: '',
+                        date_administered: '',
+                        next_appointment: ''
+                    },
+                ]
+            },
+        ];
+    </script>
+    <!-- Todo:data Array -->
+    <div class="container-fluid">
+        <div class="row pb-2">
+            <div class="col">At Birth</div>
+            <div class="col">#No</div>
+            <div class="col">Vaccine Brand</div>
+            <div class="col">Type</div>
+            <div class="col">Date Administered</div>
+            <div class="col">Next Appo On</div>
+        </div>
+        <div class="row pb-2" id="pc-table"></div>
+        <script>
+            const pcTable = document.getElementById('pc-table')
+            table_list.forEach((ele, i) => {
+                pcTable.innerHTML += `<div>
+            <!-- combination -->
+            <div class="row pb-2">
+                <div class="col">
+                    <span class="d-block">Hep B</span>
+                    <span class="d-block">Hep B</span>
+                    <span class="d-block">Hep B</span>
+                    <span class="d-block">Hep B</span>
+                </div>
+                <div class="col">
+                    <span class="d-block">1</span>
+                </div>
+                <div class="col">
+                    <span class="input-width">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    </span>
+                </div>
+                <div class="col">
+                    <span class="input-width">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    </span>
+                </div>
+                <div class="col">
+                    <span class="input-width">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    </span>
+                </div>
+                <div class="col">
+                    <span class="input-width">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    </span>
+                </div>
+            </div>
+            <!-- combination -->
+            <!-- single -->
+            <div class="row">
+                <div class="col">
+                    <span class="d-block">Hep B</span>
+                </div>
+                <div class="col">
+                    <span class="d-block">Hep B</span>
+                </div>
+                <div class="col">
+                    <span class="d-block">
+                        <div class="input-group-sm input-width">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </span>
+                </div>
+                <div class="col">
+                    <span class="d-block">
+                        <div class="input-group-sm input-width">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </span>
+                </div>
+                <div class="col">
+                    <span class="d-block">
+                        <div class="input-group-sm input-width">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </span>
+                </div>
+                <div class="col">
+                    <span class="d-block">
+                        <div class="input-group-sm input-width">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <!-- single -->
+            <hr>
+        </div>`
+            })
+        </script>
+    </div>
 </body>
 <script defer src="/alpinejs.js"></script>
 
